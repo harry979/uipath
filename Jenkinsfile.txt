@@ -6,6 +6,9 @@ pipeline {
       MINOR = '0'
   }
   stages {
+     stage ('scm') {
+        checkout scm
+     }
     stage ('Build') {
       steps {
           dir('D:/Jenkins') {
